@@ -1,4 +1,4 @@
-package com.zuhlke.kata.wordchain;
+package com.zuhlke.kata.wordchain.service;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -10,6 +10,8 @@ import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import com.zuhlke.kata.wordchain.service.Dictionary;
 
 public class DictionaryTest {
 
