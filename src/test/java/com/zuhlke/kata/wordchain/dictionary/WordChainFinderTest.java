@@ -1,4 +1,4 @@
-package com.zuhlke.kata.wordchain.service;
+package com.zuhlke.kata.wordchain.dictionary;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
@@ -7,9 +7,6 @@ import java.util.Arrays;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import com.zuhlke.kata.wordchain.service.Dictionary;
-import com.zuhlke.kata.wordchain.service.WordChainFinder;
 
 public class WordChainFinderTest {
 
