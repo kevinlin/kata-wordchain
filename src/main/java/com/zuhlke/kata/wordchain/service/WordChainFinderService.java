@@ -41,7 +41,8 @@ public class WordChainFinderService {
         WordChainFinder wordChainFinder = new WordChainFinder(dictionary);
         List<String> wordChain = wordChainFinder.getWordChain(start, end);
         stopWatch.stop();
-        System.out.print("It took %d ms to find the first word chain.");
+
+        System.out.println(String.format("It took %d ms to find the result word chain.", stopWatch.getTotalTimeMillis()));
         return wordChain;
     }
 

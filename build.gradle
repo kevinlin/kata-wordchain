@@ -1,16 +1,33 @@
-plugins {
-    id 'java'
+buildscript {
+    ext {
+        springBootVersion = '2.0.4.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
 }
 
-group 'kata.zuhlke.com'
-version '1.0-SNAPSHOT'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
+
+group = 'kata.zuhlke.com'
+version = '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    maven { url "https://repo.spring.io/milestone" }
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile('org.springframework.shell:spring-shell-starter:2.0.0.RELEASE')
+    testCompile('junit:junit:4.12')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.mockito:mockito-core:2.21.0')
 }
